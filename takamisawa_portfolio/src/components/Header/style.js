@@ -6,23 +6,20 @@ export const Container = styled.header`
     bottom: 0;
     width: 100%;
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: 1;
+    display:flex;
     color: #121212;
     
     & > div {
-        grid-column: 1 / 2; 
         background-color: #F5F5F5;
     }
 `;
 
 export const Wrapper = styled.div`
     height: auto;
-    padding-top: 65px;
-    padding-left: 35px;
-    padding-bottom:25px;
+    padding: 65px 30px 25px 35px;
     display: grid;
     grid-template-rows: auto 1fr auto; // divide o Wrapper em três linhas: topo, meio e fundo
 `;
