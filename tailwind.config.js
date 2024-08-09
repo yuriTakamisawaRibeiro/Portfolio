@@ -8,7 +8,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Satoshi', 'sans-serif']
-      }
+      },
     },
   },
   plugins: [],
