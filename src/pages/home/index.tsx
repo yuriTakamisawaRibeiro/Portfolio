@@ -1,9 +1,16 @@
 import { ChevronRight } from "lucide-react";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 
 export function Home() {
+    
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 425);
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/aboutme');
+    }
 
     useEffect(() => {
         const handleResize = () => {
@@ -36,7 +43,9 @@ export function Home() {
                 />
 
                 <div className='flex justify-center'>
-                    <button className={`relative flex items-center text-lg 
+                    <button 
+                    onClick={handleClick}
+                    className={`relative flex items-center text-lg 
                         ${isMobile ? 'py-2 pl-6 pr-12' : 'py-4 pl-8 pr-16'} 
                         bg-white border-2 border-black hover:bg-gray-100 transition-all box-border`}>
                         <span className={`flex ${isMobile ? 'text-base' : 'text-xl'} font-medium`}>

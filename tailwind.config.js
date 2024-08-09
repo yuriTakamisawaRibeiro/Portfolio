@@ -1,19 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Satoshi', 'sans-serif']
+        sans: ["Satoshi", "sans-serif"],
       },
       screens: {
-        'mobile': {'max': '425px'}
-      }
+        mobile: { max: "425px" },
+      },
     },
   },
   plugins: [],
-}
-
+};
