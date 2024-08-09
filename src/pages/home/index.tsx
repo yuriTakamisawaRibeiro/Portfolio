@@ -14,9 +14,11 @@ export function Home() {
     }, []);
 
     return (
-        <div className='h-screen flex justify-center items-center'>
+        <div className='h-screen flex justify-center items-center overflow-x-hidden'>
             <div className='flex flex-col gap-4 text-center items-center mx-2 mobile:mx-4'>
-                <h1 className='text-6xl font-bold mobile:text-4xl'>Yuri Takamisawa</h1>
+                <h1 className='text-6xl font-bold mobile:text-4xl'>
+                    Yuri Takamisawa
+                </h1>
                 <TypeAnimation
                     sequence={[
                         'Estudante Desenvolvedor',
@@ -32,6 +34,7 @@ export function Home() {
                     style={{ fontSize: isMobile ? '1.3em' : '1.8em', display: 'inline-block', fontWeight: 'medium' }}
                     repeat={Infinity}
                 />
+
                 <div className='flex justify-center'>
                     <button className={`relative flex items-center text-lg 
                         ${isMobile ? 'py-2 pl-6 pr-12' : 'py-4 pl-8 pr-16'} 
