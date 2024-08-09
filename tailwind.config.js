@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         sans: ['Satoshi', 'sans-serif']
       },
+      screens: {
+        'mobile': {'max': '425px'}
+      }
     },
   },
   plugins: [],
