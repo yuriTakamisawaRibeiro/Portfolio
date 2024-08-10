@@ -27,7 +27,7 @@ export function Home() {
 
   return (
     <div className="h-screen flex justify-center items-center overflow-x-hidden overflow-y-hidden">
-        <Menu  onClick={toggleMenu}/>
+      <Menu onClick={toggleMenu} />
       <div className="flex flex-col gap-4 text-center items-center mx-2 mobile:mx-4">
         <h1 className="text-6xl font-bold mobile:text-4xl">Yuri Takamisawa</h1>
         <TypeAnimation
@@ -53,7 +53,7 @@ export function Home() {
         <div className="flex justify-center flex-col gap-4">
           <button
             onClick={handleClick}
-            className={`relative flex items-center text-lg 
+            className={`relative flex items-center text-lg group 
                         ${isMobile ? "py-2 pl-6 pr-12" : "py-4 pl-8 pr-16"} 
                         bg-white border-2 border-black hover:bg-gray-100 transition-all box-border`}
           >
@@ -64,14 +64,14 @@ export function Home() {
             >
               Sobre mim
             </span>
-            <span className="absolute right-4 flex">
+            <span className="absolute right-4 flex transition-transform transform group-hover:translate-x-1">
               <ChevronRight />
             </span>
           </button>
 
           <button
             onClick={handleClick}
-            className={`relative flex items-center text-lg 
+            className={`relative flex items-center text-lg group 
                         ${isMobile ? "py-2 pl-6 pr-12" : "py-4 pl-8 pr-16"} 
                         bg-white border-2 border-black hover:bg-gray-100 transition-all box-border`}
           >
@@ -82,15 +82,12 @@ export function Home() {
             >
               Projetos
             </span>
-            <span className="absolute right-4 flex">
+            <span className="absolute right-4 flex transition-transform transform group-hover:translate-x-1">
               <ChevronRight />
             </span>
           </button>
         </div>
       </div>
-      
     </div>
-
-    
   );
 }
